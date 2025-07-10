@@ -1,4 +1,4 @@
-<h1 align="center">NG Extension Platform</h1>
+<h1 align="center">ngxtension - Angular Extensions</h1>
 <p align="center">
 <img src="/docs/public/ngxt-blue.svg" width="100px" height="100px">
 </p>
@@ -10,28 +10,77 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-50-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-A collection of utilities for [Angular](https://angular.dev).
+A modern collection of utilities for [Angular](https://angular.dev) – signals, forms, effects, DOM helpers, and more.
 
-## Installation
+---
 
-```shell
-npm install -D ngxtension-plugin
+## ✨ Features & Utilities
+
+- **Signal Utilities**: Advanced computed, derived, and async signals, signal history, lazy signals, and more.
+- **DOM & Event Helpers**: Click outside, gestures, resize observer, active element, host binding, and more.
+- **Forms**: Control value accessor helpers, control error, form events, if-validator, etc.
+- **RxJS & Effects**: Auto effects, explicit effects, create effect, rx-effect, take-latest-from, etc.
+- **Injection & DI**: Create injectable, create injection token, assert injector, inject-destroy, inject-lazy, inject-network, and more.
+- **Array & Object Utilities**: Filter array, map array, reduce array, merge-from, not-pattern, etc.
+- **Routing**: Inject params, inject query params, inject route data/fragment, navigation-end, linked-query-param.
+- **Internationalization**: Utilities for i18n and formatting.
+- **SVG & UI**: SVG sprite helpers, repeat pipe, trackBy helpers, and more.
+
+> **See the [full documentation](https://ngxtension.netlify.app/) for a complete list and usage examples.**
+
+---
+
+## 🚀 Installation
+
+```bash
+npm install ngxtension
+# or with pnpm
+pnpm add ngxtension
 ```
 
-then invoke the `init` generator/schematic
+### For Angular CLI or Nx workspaces
 
-```shell
+After installing, run the init schematic:
+
+```bash
 ng generate ngxtension-plugin:init
-# nx generate ngxtension-plugin:init
+# or with Nx
+nx generate ngxtension-plugin:init
 ```
 
-## Utilities
+---
 
-<!-- UTILITIES:START -->
+## 📦 Usage
 
-Check [the documentation](https://ngxtension.netlify.app/).
+Import the utilities you need:
 
-<!-- UTILITIES:END -->
+```ts
+import { linkedQueryParam } from 'ngxtension/linked-query-param';
+import { injectParams } from 'ngxtension/inject-params';
+```
+
+All utilities are tree-shakable and designed for Angular 16+.
+
+---
+
+## 📚 Documentation
+
+- **Full API & Guides:** [ngxtension.netlify.app](https://ngxtension.netlify.app/)
+- **Changelog:** [CHANGELOG.md](https://github.com/ngxtension/ngxtension-platform/blob/main/CHANGELOG.md)
+
+---
+
+## Version Compatibility Table
+
+| ngxtension Version | Release Date | Angular Version Support |
+|-------------------|--------------|------------------------|
+| **5.x** | 2025-03-14 | >=16.0.0 |
+| **4.x** | 2024-07-15 | >=16.0.0 |
+| **3.x** | 2024-04-24 | >=16.0.0 |
+| **2.x** | 2024-02-02 | >=16.0.0 |
+| **1.x** | 2023-11-09 | >=16.0.0 |
+
+---
 
 ## Contributors ✨
 
@@ -126,3 +175,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## License
+
+MIT
+
+
